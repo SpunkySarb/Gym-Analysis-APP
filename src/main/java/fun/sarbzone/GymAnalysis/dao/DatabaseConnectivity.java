@@ -32,7 +32,7 @@ public void setErrorReport(int errorReport) {
 
             try {
                 conn = DriverManager.getConnection(
-                        "jdbc:mysql://92.249.44.105/u107689122_info?tcpKeepAlive=true&autoReconnect=true&" + "user=u107689122_merisite&password=0CandyCrush0");
+                        "jdbc:mysql://b73e8b2da097bf:230bb71f@us-cdbr-east-02.cleardb.com/heroku_f4508dd8db2c12e?reconnect=true");
 
 
                 System.out.println("Log : Connected To Database");
