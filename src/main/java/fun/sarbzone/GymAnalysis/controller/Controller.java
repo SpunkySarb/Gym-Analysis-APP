@@ -109,7 +109,8 @@ mv.addObject("bindaData", readData(database.readUserData("Binda")));
 
 } else if(database.getErrorReport()==1) {
     mv.setViewName("error.jsp");
-    
+    mv.addObject("paalData", readData(database.readUserData("Paal")));
+    mv.addObject("bindaData", readData(database.readUserData("Binda")));
 }
 
 

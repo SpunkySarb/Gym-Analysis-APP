@@ -48,7 +48,7 @@ font-family:  'Courier New', monospace;
 }
 
 #welcome{
-color: red;
+color: #00b9de;
 font-weight: bold;
 font-family:  'Courier New', monospace;
 font-size: 30px;
@@ -128,7 +128,7 @@ background-color: black;
 
  <img src="logo.png"  width="350" height="150"> 
 <br>
-<p id="welcome">Data updated..!!</p>
+<p id="welcome"><img src="emoji.png"  width="30" height="30">Here's is Your Progress Report<img src="emoji.png"  width="30" height="30"></p>
 
 
 </div>

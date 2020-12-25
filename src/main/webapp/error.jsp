@@ -3,6 +3,7 @@
 <head>
 <title>SarbZone</title>
 <meta name="viewport" content="width=device-width">
+<script src="https://code.jscharting.com/2.9.0/jscharting.js"></script>
 </head>
 <style>
 #top, #middle{
@@ -43,6 +44,9 @@ font-family:  'Courier New', monospace;
   animation: myfirst 5s linear 2s infinite alternate;
 }
 
+body{
+background-color:black;
+}
 @keyframes myfirst {
    0%   { left:0px; top:0px;}
   25%  { left:0px; top:0px;}
@@ -66,6 +70,36 @@ font-family:  'Courier New', monospace;
 <br>
 <br>
  <img src="once.png"  width="300" height="150"> 
+<br>
+<br>
+<div id="chartDiv" style="width:100%; height:200px; margin:0 auto;"></div>
+    
+<script>
+JSC.Chart('chartDiv', {
+   type: 'line',
+   series: [
+      {
+         name:'Paal',
+         points: [
+            
+             
+             ${paalData}
+             
+         ]
+      },{
+         name:'Binda',
+         points: [
+            
+             
+             ${bindaData}
+             
+             
+             
+         ]
+      }
+   ]
+});
+</script>
 <br>
 <br>
 <a href="login"><button id="logout">LOGOUT</button></a>

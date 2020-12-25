@@ -121,59 +121,9 @@ background-color: black;
 
 </div>
 <div id="middle">
-<br>
-<br>
- <div id="chartDiv" style="width:100%; height:200px; margin:0 auto;"></div>
-    
-<script>
-JSC.Chart('chartDiv', {
-   type: 'line',
-   series: [
-      {
-         name:'Paal',
-         points: [
-            
-        	 
-        	 ${paalData}
-        	 
-         ]
-      },{
-         name:'Binda',
-         points: [
-            
-        	 
-        	 ${bindaData}
-        	 
-        	 
-        	 
-         ]
-      }
-   ]
-});
-</script>
-<script>
-function myFunction() {
-  var x = document.getElementById("rules");
-  if (x.style.display === "none") {
-	  document.getElementById("showRules").innerHTML="Hide Rules";
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-    document.getElementById("showRules").innerHTML="Show Rules";
 
-  }
-}
-</script>
-<p id="graph">Percentage of Challenge Completed<br><br></p>
-<button id="showRules" onclick="myFunction()">Show Rules</button>
-<br>
-<p id="rules">
-<img src="rules.png"  width="100" height="50"> 
-<br> 1) You will have only one chance to input your progress daily.<br><br>
-2) If you missed one day then your progress percentage will be  (Total%-1%).<br><br>
-3) You have to input your progress when you reach the gym and if not you have to tell that you did not go to the GYM today.<br> X-X-X-X</p>
-<br>
-<div id="question">
+
+    <div id="question">
  <img src="ques.png"  width="200" height="25">
  <table>
  <tr><td>
@@ -187,6 +137,30 @@ function myFunction() {
   <input type="hidden" name="input" value="${passwordNo }" ><br><br>
   <input id="submit" type="submit" value="NO">
 </form> </td></tr></table></div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("rules");
+  if (x.style.display === "none") {
+	  document.getElementById("showRules").innerHTML="Hide Rules";
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+    document.getElementById("showRules").innerHTML="Show Rules";
+
+  }
+}
+</script>
+<br><br>
+<button id="showRules" onclick="myFunction()">Show Rules</button>
+<br>
+<p id="rules">
+<img src="rules.png"  width="100" height="50"> 
+<br> 1) You will have only one chance to input your progress daily.<br><br>
+2) If you missed one day then your progress percentage will be  (Total%-1%).<br><br>
+3) You have to input your progress when you reach the gym and if not you have to tell that you did not go to the GYM today.<br> X-X-X-X</p>
+<br>
+
 
 
 <p id="note"><img src="emoji.png"  width="30" height="30">Developed by Sarb<img src="emoji.png"  width="30" height="30"></p>
