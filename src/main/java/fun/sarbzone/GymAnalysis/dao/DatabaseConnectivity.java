@@ -32,7 +32,7 @@ public void setErrorReport(int errorReport) {
 
             try {
                 conn = DriverManager.getConnection(
-                        "jdbc:mysql://b73e8b2da097bf:230bb71f@us-cdbr-east-02.cleardb.com/heroku_f4508dd8db2c12e?reconnect=true");
+                        "jdbc:mysql://b73e8b2da097bf:230bb71f@us-cdbr-east-02.cleardb.com/heroku_f4508dd8db2c12e?tcpKeepAlive=true&reconnect=true");
 
 
                 System.out.println("Log : Connected To Database");
