@@ -83,7 +83,7 @@ text-align: center;
 }
 
 
-#showRules{
+#showRules, #showGraph{
 background-color: #00b9de;
 font-family:  'Courier New', monospace;
 font-weight: bold;
@@ -110,7 +110,7 @@ background-color: black;
 </style>
 
 
-<body onload="myFunction()">
+<body onload="myFunction(); showGraph();">
 
 <div id="top">
 
@@ -150,6 +150,17 @@ function myFunction() {
 
   }
 }
+  function showGraph() {
+	  var x = document.getElementById("chartDiv");
+	  if (x.style.display === "none") {
+	      document.getElementById("showGraph").innerHTML="Hide Graph";
+	    x.style.display = "block";
+	  } else {
+	    x.style.display = "none";
+	    document.getElementById("showGraph").innerHTML="Show Graph";
+
+	  }
+}
 </script>
 <br><br>
 <button id="showRules" onclick="myFunction()">Show Rules</button>
@@ -161,7 +172,34 @@ function myFunction() {
 3) You have to input your progress when you reach the gym and if not you have to tell that you did not go to the GYM today.<br> X-X-X-X</p>
 <br>
 
-
+<button id="showGraph" onclick="showGraph()">Show Graph</button><br>
+ <div id="chartDiv" style="width:100%; height:200px; margin:0 auto;"><script>
+JSC.Chart('chartDiv', {
+   type: 'line',
+   series: [
+      {
+         name:'Paal',
+         points: [
+            
+             
+             ${paalData}
+             
+         ]
+      },{
+         name:'Binda',
+         points: [
+            
+             
+             ${bindaData}
+             
+             
+             
+         ]
+      }
+   ]
+});
+</script></div>
+<br>
 
 <p id="note"><img src="emoji.png"  width="30" height="30">Developed by Sarb<img src="emoji.png"  width="30" height="30"></p>
 </div>
